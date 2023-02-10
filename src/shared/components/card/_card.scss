@@ -1,0 +1,46 @@
+@import "../../../styles/variables";
+
+.card {
+   display: flex;
+   flex-direction: row;
+   box-sizing: border-box;
+   padding: 18px;
+   height: 150px;
+   gap: 10px;
+   border: 1px solid $gray--300;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.card__img {
+   max-height: 100px;
+}
+.card__description {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   width: 50%;
+   p {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      white-space: pre-wrap;
+   }
+}
+
+.cart__title {
+   font-weight: 700;
+}
+
+.card__actions {
+   display: flex;
+   gap: 4px;
+   flex-direction: row;
+}
+
+.card__category,
+.card__price {
+   font-weight: 700;
+   font-size: 18px;
+}
