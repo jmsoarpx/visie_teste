@@ -2,7 +2,7 @@ import React from "react";
 import "./_button.scss";
 
 interface IBotaoProps {
-   texto?: string;
+   texto?: any;
    className?: string;
 }
 

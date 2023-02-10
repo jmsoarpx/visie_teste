@@ -14,8 +14,10 @@
 
 .card__img {
    max-height: 100px;
+   flex: 1 1 auto;
 }
 .card__description {
+   flex: 2 1 auto;
    display: flex;
    flex-direction: column;
    gap: 8px;
@@ -31,16 +33,19 @@
 
 .cart__title {
    font-weight: 700;
+   flex: 1 1 auto;
 }
 
 .card__actions {
    display: flex;
    gap: 4px;
    flex-direction: row;
+   flex: 1 1 auto;
 }
 
 .card__category,
 .card__price {
    font-weight: 700;
    font-size: 18px;
+   flex: 1 1 auto;
 }

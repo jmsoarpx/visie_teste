@@ -1,29 +1,31 @@
 import React from "react";
 import { Button } from "../button/button";
+import { AiFillEye } from "react-icons/ai";
+import { CiEdit, CiTrash } from "react-icons/ci";
 import "./_card.scss";
 
-export const Card: React.FC = () => {
-   const valor = 1500;
+interface ICardProps {
+   img?: string;
+   descricao?: string;
+   categoria?: string;
+   valor?: string;
+   onClick?: () => void;
+}
+
+export const Card: React.FC<ICardProps> = ({ img, descricao, categoria, valor = 0 }) => {
    return (
       <div className="card">
-         <img
-            src="https://images.unsplash.com/photo-1517736996303-4eec4a66bb17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80"
-            alt=""
-            className="card__img"
-         />
+         <img src={img} alt="" className="card__img" />
          <div className="card__description">
             <div className="cart__title">figma UX</div>
-            <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis nam tempore recusandae, odit consequuntur culpa ratione atque numquam
-               architecto nesciunt obcaecati nobis aspernatur, repudiandae id velit? Exercitationem odit numquam fuga?
-            </p>
+            <p>{descricao}</p>
          </div>
-         <span className="card__category">smartphones</span>
+         <span className="card__category">{categoria}</span>
          <span className="card__price">{valor.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}</span>
          <div className="card__actions">
-            <Button texto="Ver Dados" className="primary" />
-            <Button texto="Alterar" className="secondary" />
-            <Button texto="Excluir" className="info" />
+            <Button texto={<AiFillEye size={20} />} className="primary" />
+            <Button texto={<CiEdit size={20} />} className="secondary" />
+            <Button texto={<CiTrash size={20} />} className="info" />
          </div>
       </div>
    );
