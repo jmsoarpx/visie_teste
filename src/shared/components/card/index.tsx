@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../button/button";
 import "./_card.scss";
 
 export const Card: React.FC = () => {
@@ -20,9 +21,9 @@ export const Card: React.FC = () => {
          <span className="card__category">smartphones</span>
          <span className="card__price">{valor.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}</span>
          <div className="card__actions">
-            <button>ver dados</button>
-            <button>alterar</button>
-            <button>excluir</button>
+            <Button texto="Ver Dados" className="primary" />
+            <Button texto="Alterar" className="secondary" />
+            <Button texto="Excluir" className="info" />
          </div>
       </div>
    );
