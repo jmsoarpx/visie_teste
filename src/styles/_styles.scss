@@ -1,4 +1,5 @@
-@import "./colors";
+@import "./variables";
+@import "./mixins/container";
 
 * {
    font-family: "Roboto", sans-serif;
@@ -10,4 +11,38 @@
 
 body {
    background-color: $background;
+}
+
+.container {
+   width: 100%;
+   padding-right: calc(1.5rem * 0.5); // stylelint-disable-line function-disallowed-list
+   padding-left: calc(1.5rem * 0.5); // stylelint-disable-line function-disallowed-list
+   margin-right: auto;
+   margin-left: auto;
+}
+
+@each $breakpoint, $container-max-width in $container-max-widths {
+   .container-#{$breakpoint} {
+      @extend .container;
+   }
+
+   @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      %responsive-container-#{$breakpoint} {
+         max-width: $container-max-width;
+      }
+
+      $extend-breakpoint: true;
+
+      @each $name, $width in $grid-breakpoints {
+         @if ($extend-breakpoint) {
+            .container#{breakpoint-infix($name, $grid-breakpoints)} {
+               @extend %responsive-container-#{$breakpoint};
+            }
+
+            @if ($breakpoint == $name) {
+               $extend-breakpoint: false;
+            }
+         }
+      }
+   }
 }
