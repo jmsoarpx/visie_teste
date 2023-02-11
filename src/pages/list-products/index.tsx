@@ -92,7 +92,7 @@ const ListProducts: React.FC = () => {
                   valor={row.price}
                   onClickView={() => navigate(`/visualizar-produtos/${row.id}/visualizar`)}
                   onClickEdit={() => navigate(`/visualizar-produtos/${row.id}/editar`)}
-                  onClickDelete={() => handleDeleteProduct(row.id)}
+                  onClickDelete={() => handleDeleteProduct(row.id as number)}
                />
             ))}
          </div>
