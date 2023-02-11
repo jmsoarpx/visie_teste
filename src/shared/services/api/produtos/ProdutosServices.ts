@@ -46,12 +46,6 @@ const getByID = async (id: number): Promise<IProdutos | Error> => {
    }
 };
 
-const search = async (): Promise<any> => {};
-
-const getLimit = async (): Promise<any> => {};
-
-const getByCategory = async (): Promise<any> => {};
-
 const create = async (newProduct: IProdutos): Promise<IProdutos | Error> => {
    try {
       const { data } = await Api.post("products/add", newProduct);
@@ -91,9 +85,6 @@ const deleteByID = async (id: number): Promise<IProdutos | Error> => {
 export const ProdutosServices = {
    getAll,
    getByID,
-   search,
-   getLimit,
-   getByCategory,
    create,
    updateByID,
    deleteByID,
