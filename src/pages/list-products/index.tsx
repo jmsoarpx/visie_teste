@@ -79,7 +79,6 @@ const ListProducts: React.FC = () => {
 
    return (
       <>
-         <header className="header"></header>
          <Toast />
          <div className="table">
             <Button texto="Adicionar Novo Item" onClick={() => navigate("/adicionar-produto/adiconar")} />
