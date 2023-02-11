@@ -1,11 +1,14 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import "./_button.scss";
 
-interface IBotaoProps {
+interface IBotaoProps extends ButtonHTMLAttributes<any> {
    texto?: any;
-   className?: string;
 }
 
-export const Button: React.FC<IBotaoProps> = ({ texto, className }) => {
-   return <button className={`btn ${className}`}>{texto}</button>;
+export const Button: React.FC<IBotaoProps> = ({ className, texto, ...props }) => {
+   return (
+      <button {...props} className={`btn ${className}`}>
+         {texto}
+      </button>
+   );
 };

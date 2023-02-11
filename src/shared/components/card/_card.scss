@@ -2,45 +2,33 @@
 
 .card {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    box-sizing: border-box;
-   padding: 18px;
-   height: 150px;
+   padding: 8px;
+   height: 273px;
+   width: 215px;
    gap: 10px;
    border: 1px solid $gray--300;
    align-items: center;
    justify-content: space-around;
+   flex-wrap: wrap;
 }
 
 .card__img {
-   max-height: 100px;
-   flex: 1 1 auto;
-}
-.card__description {
-   flex: 2 1 auto;
-   display: flex;
-   flex-direction: column;
-   gap: 8px;
-   width: 50%;
-   p {
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      white-space: pre-wrap;
-   }
+   max-height: 130px;
+   width: 100%;
 }
 
-.cart__title {
+.cart__name {
    font-weight: 700;
-   flex: 1 1 auto;
+   color: $white;
 }
 
 .card__actions {
    display: flex;
-   gap: 4px;
+   gap: 16px;
    flex-direction: row;
-   flex: 1 1 auto;
+   justify-content: space-around;
 }
 
 .card__category,
@@ -48,4 +36,5 @@
    font-weight: 700;
    font-size: 18px;
    flex: 1 1 auto;
+   color: $white;
 }

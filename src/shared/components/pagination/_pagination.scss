@@ -1,0 +1,45 @@
+@import "../../../styles/variables";
+
+.item {
+   align-items: center;
+   cursor: pointer;
+   display: flex;
+   font-size: 14px;
+   height: 40px;
+   justify-content: center;
+   width: 40px;
+}
+
+.disabled-page {
+   color: $gray--300;
+}
+
+.active {
+   border: solid 1px $gray--500;
+   border-radius: 40px;
+   color: #808e9b;
+}
+
+.break-me {
+}
+
+.pagination {
+   align-items: center;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   list-style-type: none;
+   position: relative;
+}
+
+.pagination-page {
+   font-weight: 700;
+}
+
+.pagination__div {
+   display: flex;
+   justify-content: space-around;
+   padding: 20px;
+   box-sizing: border-box;
+   flex-direction: column;
+}

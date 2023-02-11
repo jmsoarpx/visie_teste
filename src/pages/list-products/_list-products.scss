@@ -5,3 +5,10 @@
    margin-bottom: 20px;
    background-color: $primary;
 }
+
+.table {
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+   flex-wrap: wrap;
+}

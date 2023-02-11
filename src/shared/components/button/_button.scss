@@ -6,7 +6,10 @@
    justify-content: center;
    padding: 8px;
    border: none;
-   border-radius: 4px;
+   cursor: pointer;
+   border-radius: 12px;
+   width: 100%;
+   font-weight: 600;
 }
 
 .primary {
@@ -16,10 +19,20 @@
 
 .secondary {
    background-color: $secondary;
-   color: $white;
+   color: $black;
 }
 
 .info {
    background-color: $info;
+   color: $black;
+}
+
+.warning {
+   background-color: $warning;
+   color: $black;
+}
+
+.inherit {
+   background-color: $inherit;
    color: $white;
 }
